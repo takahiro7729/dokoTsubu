@@ -18,8 +18,10 @@ import model.User;
 public class Login extends HttpServlet {
 	private static final long serialVersionUID = 1L;
  
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			//リクエストパラメータの取得
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+		    throws ServletException, IOException {
+		   
+	    //リクエストパラメータの取得
 		request.setCharacterEncoding("UTF-8");
 		String name = request.getParameter("name");
 		String pass = request.getParameter("pass");
@@ -38,7 +40,7 @@ public class Login extends HttpServlet {
 			session.setAttribute("loginUser",user);
 		  }
 		//ログイン結果画面にフォワード
-		RequestDispatcher despatcher =request.getRequestDispatcher("WEB-INF/jsp/loginResult.jsp");
+		RequestDispatcher despatcher =request.getRequestDispatcher("WEB-INF/loginResult.jsp");
 		despatcher.forward(request, response);
 		}
 	}

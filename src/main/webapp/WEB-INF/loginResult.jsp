@@ -2,8 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ page import="model.User" %>
 <%
-//セッションスコープからユーザー情報を取得
-User loginUser = (User)sission.getAttribute("loginUser");
+// セッションスコープからユーザー情報を取得
+User loginUser = (User)session.getAttribute("loginUser");
 %>
 
 <!DOCTYPE html>
@@ -16,7 +16,7 @@ User loginUser = (User)sission.getAttribute("loginUser");
 <h1>どこつぶログイン</h1>
 <% if (loginUser !=null) {%>
   <p>ログインに成功しました</p>
-  <p>ようこそ<% loginUser.getName() %>さん</p>
+  <p>ようこそ<%= loginUser.getName() %>さん</p>
   <a href="Main">つぶやき投稿・閲覧</a>
 <%} else { %>
   <p>ログインに失敗しました</p>
