@@ -12,6 +12,9 @@ User loginUser = (User)session.getAttribute("loginUser");
 <title>どこつぶ</title>
 </head>
 <body>
-
+<h1>どこつぶメイン</h1>
+<p>
+<%= loginUser.getName() %>さん、ログイン中
+</p>
 </body>
 </html>
