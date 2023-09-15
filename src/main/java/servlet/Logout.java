@@ -19,8 +19,9 @@ public class Logout extends HttpServlet {
 	    //セッションスコープを破棄
 		HttpSession session = request.getSession();
 		session.invalidate();
+		
 		//ログアウト画面異フォワード
-		RequestDispatcher despatcher =request.getRequestDispatcher("WEB-INF/logout.jsp");
+		RequestDispatcher despatcher=request.getRequestDispatcher("WEB-INF/jsp/logout.jsp");
 		despatcher.forward(request, response);
 	}
 

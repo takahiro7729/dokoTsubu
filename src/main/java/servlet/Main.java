@@ -45,7 +45,7 @@ public class Main extends HttpServlet {
 			response.sendRedirect("index,jsp");
 		}else {//ログイン済みの場合
 			//フォワード
-			RequestDispatcher despatcher =request.getRequestDispatcher("WEB-INF/main.jsp");
+			RequestDispatcher despatcher =request.getRequestDispatcher("WEB-INF/jsp/main.jsp");
 			despatcher.forward(request, response);
 		}
 	}

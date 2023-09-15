@@ -40,7 +40,7 @@ public class Login extends HttpServlet {
 			session.setAttribute("loginUser",user);
 		  }
 		//ログイン結果画面にフォワード
-		RequestDispatcher despatcher =request.getRequestDispatcher("WEB-INF/loginResult.jsp");
+		RequestDispatcher despatcher =request.getRequestDispatcher("WEB-INF/jsp/loginResult.jsp");
 		despatcher.forward(request, response);
 		}
 	}
