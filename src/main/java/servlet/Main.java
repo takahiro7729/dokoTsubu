@@ -50,6 +50,7 @@ public class Main extends HttpServlet {
 			despatcher.forward(request, response);
 		}
 	}
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		String text = request.getParameter("text");
@@ -72,7 +73,13 @@ public class Main extends HttpServlet {
 			
 			//アプリケーションスコープにつぶやきリストを保存
 			application.setAttribute("mutterList",mutterList);
-	   }
+		
+		}else {
+			//エラーメッセージをリクエストスコープに保存
+			request.setAttribute("errorMsg","つぶやきが入力されていませ");
+			
+		}
+	   
 	        //メイン画面にフォワード
 	        RequestDispatcher despatcher =request.getRequestDispatcher("WEB-INF/main.jsp");
 		    despatcher.forward(request, response);
