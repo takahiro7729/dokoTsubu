@@ -76,7 +76,7 @@ public class Main extends HttpServlet {
 		
 		}else {
 			//エラーメッセージをリクエストスコープに保存
-			request.setAttribute("errorMsg","つぶやきが入力されていませ");
+			request.setAttribute("errorMsg","つぶやきが入力されていません");
 			
 		}
 	   

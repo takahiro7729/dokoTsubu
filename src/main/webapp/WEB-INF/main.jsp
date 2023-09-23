@@ -7,7 +7,7 @@ User loginUser = (User)session.getAttribute("loginUser");
 //アプリケーションスコープに保存されたつぶやきリストを取得
 List<Mutter>mutterList = (List<Mutter>)application.getAttribute("mutterList");
 //リクエストスコープに保存されたエラーメッセージを取得
-String erroMsg = (String)request.getAttribute("errorMsg");
+String errorMsg = (String)request.getAttribute("errorMsg");
 %>
 <!DOCTYPE html>
 <html>
